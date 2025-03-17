@@ -259,12 +259,12 @@ void LD2412Component::handle_periodic_data_(uint8_t *buffer, int len) {
       this->detection_distance_sensor_->publish_state(new_detect_distance);
   }
 
-  if (this->light_sensor_ != nullptr) {
-      ESP_LOGCONFIG(TAG, "  new_light_sensor : %u", buffer[LIGHT_SENSOR]);
-      int new_light_sensor = (buffer[LIGHT_SENSOR]*100)/255;
-      if (this->light_sensor_->get_state() != new_light_sensor)
-        this->light_sensor_->publish_state(new_light_sensor);
-    }
+  // if (this->light_sensor_ != nullptr) {
+  //     ESP_LOGCONFIG(TAG, "  new_light_sensor : %u", buffer[LIGHT_SENSOR]);
+  //     int new_light_sensor = (buffer[LIGHT_SENSOR]*100)/255;
+  //     if (this->light_sensor_->get_state() != new_light_sensor)
+  //       this->light_sensor_->publish_state(new_light_sensor);
+  //   }
   if (engineering_mode) {
     /*
       Moving distance range: 18th byte
