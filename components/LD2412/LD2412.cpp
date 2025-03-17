@@ -310,7 +310,7 @@ void LD2412Component::handle_periodic_data_(uint8_t *buffer, int len) {
     // else if (!std::isnan(this->light_sensor_->get_state()){
     //  this->light_sensor_->publish_state(NAN);
     // }
-  }
+//  }
   //   if (this->light_sensor_ != nullptr && !std::isnan(this->light_sensor_->get_state())) {
     //   this->light_sensor_->publish_state(NAN);
     // }
