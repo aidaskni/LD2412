@@ -306,8 +306,10 @@ void LD2412Component::handle_periodic_data_(uint8_t *buffer, int len) {
   
       if (this->light_sensor_->get_state() != new_light_sensor)
         this->light_sensor_->publish_state(new_light_sensor);
-    } else if (!std::isnan(this->light_sensor_->get_state()){
+    }
+    else if (!std::isnan(this->light_sensor_->get_state()){
      this->light_sensor_->publish_state(NAN);
+    }
   }
   //   if (this->light_sensor_ != nullptr && !std::isnan(this->light_sensor_->get_state())) {
     //   this->light_sensor_->publish_state(NAN);
