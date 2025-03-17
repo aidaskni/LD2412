@@ -283,6 +283,7 @@ void LD2412Component::handle_periodic_data_(uint8_t *buffer, int len) {
       Light sensor: 38th bytes
     */
     if (this->light_sensor_ != nullptr) {
+        ESP_LOGCONFIG(TAG, "  new_light_sensor : %ums", this->light_sensor_);
       int new_light_sensor = (buffer[LIGHT_SENSOR]*100)/255;
       if (this->light_sensor_->get_state() != new_light_sensor)
         this->light_sensor_->publish_state(new_light_sensor);
