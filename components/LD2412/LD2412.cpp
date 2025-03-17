@@ -27,8 +27,8 @@ void LD2412Component::dump_config() {
   LOG_BINARY_SENSOR("  ", "OutPinPresenceStatusBinarySensor", this->out_pin_presence_status_binary_sensor_);
 #endif
 #ifdef USE_SWITCH
-//  LOG_SWITCH("  ", "EngineeringModeSwitch", this->engineering_mode_switch_);
-//  LOG_SWITCH("  ", "BluetoothSwitch", this->bluetooth_switch_);
+  LOG_SWITCH("  ", "EngineeringModeSwitch", this->engineering_mode_switch_);
+  LOG_SWITCH("  ", "BluetoothSwitch", this->bluetooth_switch_);
 #endif
 #ifdef USE_BUTTON
   LOG_BUTTON("  ", "ResetButton", this->reset_button_);
@@ -54,9 +54,9 @@ void LD2412Component::dump_config() {
   LOG_TEXT_SENSOR("  ", "MacTextSensor", this->mac_text_sensor_);
 #endif
 #ifdef USE_SELECT
-//  LOG_SELECT("  ", "LightFunctionSelect", this->light_function_select_);
+  LOG_SELECT("  ", "LightFunctionSelect", this->light_function_select_);
   LOG_SELECT("  ", "OutPinLevelSelect", this->out_pin_level_select_);
-  //LOG_SELECT("  ", "DistanceResolutionSelect", this->distance_resolution_select_);
+  LOG_SELECT("  ", "DistanceResolutionSelect", this->distance_resolution_select_);
   LOG_SELECT("  ", "BaudRateSelect", this->baud_rate_select_);
   LOG_SELECT("  ", "ModeSelect", this->mode_select_);
 #endif
