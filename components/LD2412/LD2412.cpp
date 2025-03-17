@@ -301,20 +301,16 @@ void LD2412Component::handle_periodic_data_(uint8_t *buffer, int len) {
     }
 
     int new_light_sensor = -1;
-     if (this->light_sensor_ != nullptr) {
-       new_light_sensor = buffer[LIGHT_SENSOR];
-      if (this->light_sensor_->get_state() != new_light_sensor)
-        this->light_sensor_->publish_state(new_light_sensor);
-  
+    if (this->light_sensor_ != nullptr) {
+      new_light_sensor = buffer[LIGHT_SENSOR];
     }
-     else{
-      this->light_sensor_->publish_state(NAN);
-     }
-//  }
+    if (this->light_sensor_->get_state() != new_light_sensor)
+      this->light_sensor_->publish_state(new_light_sensor);
+  }
   //   if (this->light_sensor_ != nullptr && !std::isnan(this->light_sensor_->get_state())) {
     //   this->light_sensor_->publish_state(NAN);
     // }
-  }
+  
   //}
 #endif
 #ifdef USE_BINARY_SENSOR
