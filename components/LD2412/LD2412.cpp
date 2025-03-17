@@ -36,7 +36,7 @@ void LD2412Component::dump_config() {
   LOG_BUTTON("  ", "QueryButton", this->query_button_);
 #endif
 #ifdef USE_SENSOR
-  //LOG_SENSOR("  ", "LightSensor", this->light_sensor_);
+  LOG_SENSOR("  ", "LightSensor", this->light_sensor_);
   LOG_SENSOR("  ", "MovingTargetDistanceSensor", this->moving_target_distance_sensor_);
   LOG_SENSOR("  ", "StillTargetDistanceSensor", this->still_target_distance_sensor_);
   LOG_SENSOR("  ", "MovingTargetEnergySensor", this->moving_target_energy_sensor_);
@@ -61,7 +61,7 @@ void LD2412Component::dump_config() {
   LOG_SELECT("  ", "ModeSelect", this->mode_select_);
 #endif
 #ifdef USE_NUMBER
-//  LOG_NUMBER("  ", "LightThresholdNumber", this->light_threshold_number_);
+  LOG_NUMBER("  ", "LightThresholdNumber", this->light_threshold_number_);
   LOG_NUMBER("  ", "MaxDistanceGateNumber", this->max_distance_gate_number_);
   LOG_NUMBER("  ", "MinDistanceGateNumber", this->min_distance_gate_number_);
   LOG_NUMBER("  ", "TimeoutNumber", this->timeout_number_);
